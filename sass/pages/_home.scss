@@ -2,6 +2,10 @@
   background: $gray-background-color;
   padding: 10rem 0 45rem;
   text-transform: capitalize;
+
+  @include rwd (phone) {
+    padding: 4rem 0 87rem;
+  }
 }
 
 
@@ -9,6 +13,11 @@
   padding: 7rem 0 55rem;
   background: $primary-color;
   margin-top: -7rem;
+
+  @include rwd (tab) {
+    margin-top: -3rem;
+    padding: 7rem 0 7rem;
+  }
 
   // skewing to make look like a clip path
   transform: skewY(-5deg);
@@ -32,6 +41,10 @@
   rgba($white-text-color, .9) 0%,
   rgba($white-text-color, .9) 50%,
   transparent 50%);
+  @include rwd (phone) {
+    background: linear-gradient(127deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 59%, transparent 50%)
+
+  }
 
   background-size: cover;
   border-radius: .3rem;
@@ -39,7 +52,7 @@
   height: 50rem;
 
   &__heading {
-    text-transform: uppercase; 
+    text-transform: uppercase;
   }
 
   &__form {

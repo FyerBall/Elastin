@@ -4,6 +4,16 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include rwd (phone) {
+      margin-bottom: 6rem;
+
+    }
+  }
+
+  @include rwd (phone) {
+    max-width: 50rem;
+
   }
   // @include clearFix; // The col lost its height and this should fix it
   // CSS Attribute Selectors
@@ -16,6 +26,17 @@
     // padding: $gutter-padding;
     &:not(:last-child) {
       margin-right: 6rem;
+      margin-bottom: 6rem;
+
+      @include rwd (phone) {
+        margin-right: 0;
+
+      }
+    }
+
+    @include rwd (phone) {
+      width: 100% !important;
+
     }
   }
 

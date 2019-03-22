@@ -7,9 +7,25 @@
 }
 
 html {
-font-size: 10px;
+  font-size: 62.5%;
+
+  @include rwd (largeScreen) {
+    font-size: 56.25%;
+  }
+
+  @include rwd (phone) {
+    font-size: 50%;
+  }
+
+
+  @include rwd (xlScreen) {
+    font-size: 75%;
+  }
+
 }
 
 body {
   padding: 2rem;
+
+
 }

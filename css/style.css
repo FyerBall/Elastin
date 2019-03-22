@@ -16,7 +16,16 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 10px; }
+  font-size: 62.5%; }
+  @media screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media screen and (max-width: 43.75em) {
+    html {
+      font-size: 50%; } }
+  @media screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   padding: 2rem; }
@@ -116,6 +125,15 @@ body {
   display: flex;
   position: absolute;
   left: 20%; }
+  @media screen and (max-width: 75em) {
+    .plans__card {
+      left: 11%; } }
+  @media screen and (max-width: 56.25em) {
+    .plans__card {
+      position: inherit;
+      padding: 7rem 0 7rem;
+      margin: 0 auto;
+      width: 90%; } }
 
 .price__plan {
   position: relative;
@@ -149,6 +167,11 @@ body {
     position: relative;
     color: #fff;
     text-transform: uppercase; }
+    @media screen and (max-width: 43.75em) {
+      .price__plan--name {
+        font-size: 2.3rem;
+        top: 5%;
+        left: -8%; } }
   .price__plan--price {
     font-size: 6rem;
     margin: 0 0 .5rem 0; }
@@ -176,12 +199,19 @@ body {
       position: absolute;
       left: 80px;
       top: 10px; }
+      @media screen and (max-width: 43.75em) {
+        .price__plan--list:before {
+          left: 3px; } }
 
 .featured {
   z-index: 1;
   width: 30.4rem;
   margin: -3rem -2rem;
   box-shadow: 0px 8px 25px 0px rgba(67, 74, 84, 0.16); }
+
+@media screen and (max-width: 43.75em) {
+  .form {
+    width: 16rem; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -275,10 +305,23 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media screen and (max-width: 43.75em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media screen and (max-width: 43.75em) {
+    .row {
+      max-width: 50rem; } }
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
+      margin-right: 6rem;
+      margin-bottom: 6rem; }
+      @media screen and (max-width: 43.75em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0; } }
+    @media screen and (max-width: 43.75em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -325,12 +368,19 @@ body {
   background: #f7f7f7;
   padding: 10rem 0 45rem;
   text-transform: capitalize; }
+  @media screen and (max-width: 43.75em) {
+    .privacy {
+      padding: 4rem 0 87rem; } }
 
 .plans {
   padding: 7rem 0 55rem;
   background: #3A9ACA;
   margin-top: -7rem;
   transform: skewY(-5deg); }
+  @media screen and (max-width: 56.25em) {
+    .plans {
+      margin-top: -3rem;
+      padding: 7rem 0 7rem; } }
   .plans > * {
     transform: skewY(5deg); }
 
@@ -345,6 +395,9 @@ body {
   border-radius: .3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
   height: 50rem; }
+  @media screen and (max-width: 43.75em) {
+    .contact {
+      background: linear-gradient(127deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 59%, transparent 50%); } }
   .contact__heading {
     text-transform: uppercase; }
   .contact__form {

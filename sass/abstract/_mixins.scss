@@ -1,0 +1,32 @@
+// Media Query Manger
+// 1em = 16px
+// 600px / 16 = 37.5em
+// 900px / 16 = 56.25em
+// 1200 / 16 =  75em
+// 1800px / 16 = 112.5
+@mixin rwd($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media screen and (max-width: 43.75em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tab) {
+    @media screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == largeScreen) {
+    @media screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+
+  @if ($breakpoint == xlScreen) {
+    @media screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
