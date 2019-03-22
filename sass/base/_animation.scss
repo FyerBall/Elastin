@@ -1,0 +1,19 @@
+// Animation 
+@keyframes moveLeft {
+  0% {
+    // Start
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  80% {
+    // Middle
+    transform: translateX(1rem);
+  }
+
+  100% {
+    // Ends
+    opacity: 1;
+    transform: translate(0);
+  }
+}

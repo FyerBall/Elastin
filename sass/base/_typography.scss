@@ -1,0 +1,48 @@
+// Body style
+body {
+  font-family: monospace;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: $defult-font-size;
+  color: $primary-color-light;
+}
+
+// Header elements
+.header__heading {
+  text-transform: uppercase;
+
+
+  &--main {
+    display: block;
+    font-weight: 400;
+    letter-spacing: .7rem;
+    animation: moveLeft 1s ease-in;
+
+  }
+
+  &--typewriter {
+    width: 90%;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    // Animation
+  }
+
+}
+
+
+.privacy__heading {
+  background: linear-gradient(to left, $primary-color, $primary-color-dark);
+  display: inline-block;
+    // Color behind the text
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

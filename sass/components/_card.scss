@@ -1,0 +1,111 @@
+.plans__card {
+  display: flex;
+  position: absolute;
+  left: 20%;
+}
+
+.price__plan {
+  position: relative;
+  width: 30rem;
+  background: white;
+  padding: 4rem 0;
+  text-align: center;
+  box-shadow: 0px 1px 2px 0px rgba($card-border, 0.2);
+  border-radius: $card-border-radius;
+  overflow: hidden; // To get rid of the list styling
+
+  &::before {
+    // The wrapper
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 48px;
+    width: 94%;
+    border: 20px solid rgba(52, 105, 154, 0.8);
+    border-right: 20px solid transparent;
+
+
+  }
+
+  // Selecting the first card
+   &:first-child{
+     .price__plan--price {
+       color: $card-beta-price;
+     }
+
+   }
+
+   &:nth-child(2) {
+    .price__plan--price {
+     color: $card-alpha-price;
+     }
+   }
+
+   &:last-child {
+    .price__plan--price {
+     color: $card-mega-price;
+     }
+   }
+
+   &--name {
+     // margin-top: 30px;
+     font-weight: 200;
+     font-size: 3.3rem;
+      margin: 0 0 1.5rem 0;
+      font-weight: 400;
+      color: $card-list;
+      // This to make the names on top of the wrappers
+      // In order for z-index to work, add
+      // position:absolute or a position:relative property
+      position: relative;
+      color: $card-white;
+      text-transform: uppercase;
+
+
+   }
+
+   &--price {
+     font-size: 6rem;
+      margin: 0 0 .5rem 0;
+   }
+
+   &--description {
+     font-size: 1rem;
+     color: mix($grey-text-color, $white-text-color, 50%);
+     margin-bottom: 1.5rem;
+     letter-spacing: .3rem;
+     text-transform: uppercase;
+   }
+
+   &--features {
+     list-style: none;
+      font-size: 1.5rem;
+      margin-top: 2.2rem;
+      line-height: 2.5;
+      color: $card-grey-light;
+   }
+
+   &--list {
+     position: relative;
+     &:not(:last-child) {
+            border-bottom: 1px solid $gray-background-color;
+          }
+          // Creating the list ο style
+      &:before {
+      content: '\03BF'; // utf8icons ο Greek Small Letter Omicron
+      color: $card-list;
+      font-family: 'osfont' !important;
+      line-height: 1;
+      position: absolute;
+      left: 80px;
+      top: 10px;
+    }
+   }
+}
+
+.featured {
+  z-index: 1;
+  width: 30.4rem;
+  margin: -3rem -2rem;
+  box-shadow: 0px 8px 25px 0px rgba($card-border, 0.16);
+}

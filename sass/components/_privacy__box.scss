@@ -1,0 +1,25 @@
+.privacy {
+
+  &__box {
+    background: rgba($white-text-color, .8);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: .4rem;
+    box-shadow: 0 1.5rem 4rem rgba($dark-shadow, .15);
+    transition: all .3s;
+    &:hover {
+      transform: translateY(-1.3rem) scale(1.03);
+    }
+  }
+  &__icon {
+    font-size: 4rem;
+    margin-bottom: .5rem;
+    background: linear-gradient(to right, $primary-color-dark, $primary-color-light);
+    display: inline-block;
+    // Color behind the text
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
